@@ -6,6 +6,8 @@ const protect = require('./middlewares/authmiddleware');
 const env = require('dotenv');
 const cors = require("cors");
 app.use(cors());
+app.options('*', cors()) 
+
 app.use(express.json());
 connectdb();
 
